@@ -12,13 +12,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Ronzino";
-  src: url("/static/fonts/Ronzino.woff2") format("woff2");
-  font-weight: unset;
-  font-style: normal;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
