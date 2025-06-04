@@ -5,14 +5,15 @@
     <base target="_self" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/css/main.css" rel="stylesheet" />
+    <link href="/static/css/blog.css" rel="stylesheet" />
     <link href="/static/css/mobile_menu.css" rel="stylesheet" />
-    <title>Test</title>
+    <title>Blog | Halide</title>
   </head>
   <body>
     <header class="site-header">
       <div class="container header-content">
         <div class="logo-nav-group">
-          <a href="#" class="logo">
+          <a href="/" class="logo">
             <img
               src="/static/img/halide_logo.svg"
               alt="Halide logo"
@@ -48,40 +49,25 @@
 
     <main>
       <div class="container">
-        <section class="hero-section">
-          <div class="hero-text">
-            <h1 class="hero-title">
-              Powering a Better Web
-            </h1>
-          </div>
-          <div class="hero-description">
-            <p>
-              Hello, we're Halide Compression. We are building multimedia
-              compression technology that is fast, efficient, and designed
-              around the human visual system. We believe in a more beautiful
-              Web, and we are here to help build it.
-            </p>
-          </div>
-        </section>
+        <h1>Blog</h1>
 
-        <div class="image-container">
-          <picture>
-            <source
-              srcset="/static/img/jxl/bouquet-med.jxl"
-              type="image/jxl"
-            />
-            <img
-              src="/static/img/bouquet-med.webp"
-              loading="lazy"
-              width=1536
-              height=864
-              alt="Bouquet of Flowers"
-            />
-          </picture>
-        </div>
+        <section class="blog-posts">
+          <article class="blog-post-card">
+            <a href="/blog/introducing-iris/index.html" class="blog-post-link">
+              <div class="blog-post-date">June 4, 2025</div>
+              <h2>Introducing Iris for WebP</h2>
+              <p>
+                Today we're excited to announce the Iris project, our in-house
+                image encoder. We've begun work on Iris's first codec,
+                Iris-WebP: A WebP encoder that brings impressive gains over the
+                reference encoder.
+              </p>
+              <div class="read-more">Read more</div>
+            </a>
+          </article>
+        </section>
       </div>
     </main>
-
     <script src="/static/js/mobile_menu.js"></script>
   </body>
 </html>

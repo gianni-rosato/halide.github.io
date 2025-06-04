@@ -5,6 +5,7 @@
     <base target="_self" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/css/main.css" rel="stylesheet" />
+    <link href="/static/css/mobile_menu.css" rel="stylesheet" />
     <title>About</title>
   </head>
   <body>
@@ -12,11 +13,16 @@
       <div class="container header-content">
         <div class="logo-nav-group">
           <a href="/" class="logo">
-            <span class="logo-icon">H</span> Test
+            <img
+              src="/static/img/halide_logo.svg"
+              alt="Halide logo"
+              class="logo-icon"
+            >
           </a>
           <nav class="main-nav">
             <a href="/about/index.html">About</a>
-            <a href="#">Blog</a>
+            <a href="/iris/index.html">Iris</a>
+            <a href="/blog/index.html">Blog</a>
           </nav>
         </div>
 
@@ -50,26 +56,56 @@
           </div>
           <div class="hero-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Halide Compression was founded to address a core need that a vast
+              quantity of Web companies face: Delivering high-quality images at
+              scale is hard, and new compression tech should make it easier, but
+              often doesn't. We develop solutions to this problem.
             </p>
           </div>
         </section>
+        <div class="image-container">
+          <picture>
+            <source
+              srcset="/static/img/jxl/plant-med.jxl"
+              type="image/jxl"
+            />
+            <img
+              src="/static/img/plant-med.webp"
+              loading="lazy"
+              width=1536
+              height=864
+              alt="Bouquet of Flowers"
+            />
+          </picture>
+        </div>
+        <h1>
+          Our Goal
+        </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          In short, we want to be your one-stop shop for image compression
+          consulting and services. Companies like us already exist for video;
+          video compression is expensive, and has garnered a rich ecosystem
+          around its needs. There are a significant number of integrators who
+          will help video businesses scale, offering cloud encoding solutions,
+          high-quality licensed encoders, and more. Images often don't see the
+          same love.
+        </p>
+        <p>
+          At Halide Compression, our aim is to provide industry-leading products
+          and expert consulting services to help companies where images matter.
+          We want to play a significant role in powering a modern image
+          compression ecosystem in order to help us all collectively move away
+          from legacy standards. Newer image standards paired with top-tier
+          implementations provide a faster, lighter, and more beautiful Web.
+        </p>
+        <h1>
+          Contact Us
+        </h1>
+        <p>
+          We'll have contact info up soon. Stay tuned!
         </p>
       </div>
     </main>
+    <script src="/static/js/mobile_menu.js"></script>
   </body>
 </html>

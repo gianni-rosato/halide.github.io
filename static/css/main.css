@@ -26,6 +26,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: oklch(0.2 0.047 83);
   font-family: "Karrik", sans-serif;
   margin-bottom: 0.75em;
   line-height: 1.2;
@@ -41,7 +42,7 @@ h3 {
   font-size: 1.75rem;
 }
 
-p {
+p, li {
   margin-bottom: 1rem;
   font-size: 1.125rem;
   color: oklch(0.3 0.094 83);
@@ -66,6 +67,7 @@ a:hover {
 }
 
 .site-header {
+  position: relative;
   font-family: "Karrik", sans-serif;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -84,17 +86,15 @@ a:hover {
 }
 
 .logo {
+  color: oklch(0.0 0 0);
   font-size: 1.25rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  color: oklch(0.2 0.047 83);
   margin-right: 2rem;
 }
 
 .logo-icon {
-  background-color: oklch(0.2 0.047 83);
-  color: oklch(0.95 0.06 83);
   width: 1.5rem;
   height: 1.5rem;
   display: inline-flex;
@@ -105,20 +105,6 @@ a:hover {
   font-family: monospace;
   font-size: 0.875rem;
   line-height: 1;
-}
-
-.main-nav {
-  display: none;
-}
-
-.main-nav a {
-  margin-left: 1.5rem;
-  font-size: 1rem;
-  color: oklch(0.3 0.094 83);
-}
-
-.main-nav a:hover {
-  color: oklch(0.5 0.06 83);
 }
 
 .cta-button {
@@ -136,18 +122,6 @@ a:hover {
   color: oklch(0.2 0.047 83);
 }
 
-.mobile-menu-button {
-  display: block;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.mobile-menu-button svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  stroke: oklch(0.2 0 0);
-}
-
 main {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -159,6 +133,7 @@ main {
   gap: 3rem;
   align-items: center;
   margin-bottom: 4rem;
+  min-height: 12rem; /* Set a minimum height for consistent spacing */
 }
 
 .hero-title {
@@ -175,11 +150,11 @@ main {
 }
 
 .image-container {
-  border-radius: 2.0rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 3rem;
   /* box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06); */
@@ -190,7 +165,47 @@ main {
   width: 100%;
   height: auto;
   object-fit: scale-down;
-  border-radius: 0.25rem;
+  border-radius: 2.0rem;
+}
+
+/* Performance Tiles Styles */
+.performance-tiles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.performance-tile {
+  background-color: oklch(0.95 0.06 83); /* Match page background */
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid oklch(0.8 0.06 83); /* Match header border */
+  transition: transform 0.2s ease;
+}
+
+.performance-tile:hover {
+  transform: translateY(-5px);
+}
+
+.tile-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1.5rem;
+  stroke: oklch(0.2 0.047 83); /* Match h1 color */
+}
+
+.performance-tile h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: oklch(0.2 0.047 83);
+}
+
+.performance-tile p {
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -206,6 +221,10 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin-bottom: 6rem;
+  }
+
+  .performance-tiles {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .hero-title {

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <base target="_self" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/main.css" rel="stylesheet" />
+    <link href="/static/css/mobile_menu.css" rel="stylesheet" />
+    <title>Iris</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="logo-nav-group">
+          <a href="/" class="logo">
+            <img
+              src="/static/img/halide_logo.svg"
+              alt="Halide logo"
+              class="logo-icon"
+            >
+          </a>
+          <nav class="main-nav">
+            <a href="/about/index.html">About</a>
+            <a href="/iris/index.html">Iris</a>
+            <a href="/blog/index.html">Blog</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center">
+          <button class="mobile-menu-button" aria-label="Open menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="hero-section">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              Iris
+            </h1>
+          </div>
+          <div class="hero-description">
+            <p>
+              Iris is a fast & efficient image encoder built to help provide a
+              more beautiful Web. Designed around the intricacies of the human
+              visual system and thoroughly evaluated under industry-leading
+              psychovisual metrics, Iris takes Web-first image compression
+              technology to a new level.
+            </p>
+          </div>
+        </section>
+        <div class="image-container">
+          <picture>
+            <source
+              srcset="/static/img/jxl/sun-med.jxl"
+              type="image/jxl"
+            />
+            <img
+              src="/static/img/sun-med.webp"
+              loading="lazy"
+              width=1536
+              height=864
+              alt="Bouquet of Flowers"
+            />
+          </picture>
+        </div>
+        <h1>
+          Iris for WebP
+        </h1>
+        <p>
+          WebP was introduced in 2010 with the goal of providing better
+          compression for Web images. While it claimed to offer significant
+          efficiency advantages over JPEG, in practice this wasn't always true.
+          Its adoption was also slow due to an initial lack of widespread
+          browser support and further lackluster support outside of the Web
+          ecosystem. This led to WebP being perceived as a confusing addition to
+          the Web. Iris-WebP changes all of that.
+        </p>
+        <p>
+          Iris-WebP provides a fast, efficient WebP encoder designed for the
+          human eye. Images encoded with Iris-WebP look significantly better
+          than those encoded with the reference WebP encoder, and Iris-WebP
+          performance outclasses encoders for slower, newer Web-first formats
+          like AVIF. Plus, WebP support is ubiquitous now, and large websites
+          serve billions of WebP images every single day.
+        </p>
+        <section class="performance-tiles">
+          <div class="performance-tile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="oklch(0.2 0.047 83)"
+              class="tile-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <h3>Fast</h3>
+            <p>
+              Iris-WebP's slowest encodes are close to AVIF's fastest, making it
+              significantly faster than the latest modern Web codecs while still
+              expertly preserving image fidelity.
+            </p>
+          </div>
+          <div class="performance-tile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="oklch(0.2 0.047 83)"
+              class="tile-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9.75V12m0 0l4.754 4.754M12 12L7.246 16.754M12 12v2.25m0-12a9 9 0 110 18 9 9 0 010-18zm0 12.75a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"
+              />
+            </svg>
+            <h3>Efficient</h3>
+            <p>
+              Achieve up to 30% better compression than the best JPEG encoders,
+              leading to faster page load times and greatly reduced bandwidth at
+              a negligible compatibility cost.
+            </p>
+          </div>
+          <div class="performance-tile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="oklch(0.2 0.047 83)"
+              class="tile-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <h3>High Quality</h3>
+            <p>
+              Iris-WebP is designed with the human visual system in mind,
+              allowing up to 17% better compression than the reference WebP
+              encoder (or within 1% of AVIF).
+            </p>
+          </div>
+        </section>
+        <h1>
+          Metrics
+        </h1>
+        <p>
+          These are coming soon, stay tuned!
+        </p>
+      </div>
+    </main>
+    <script src="/static/js/mobile_menu.js"></script>
+  </body>
+</html>
