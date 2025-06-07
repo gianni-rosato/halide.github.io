@@ -3,6 +3,7 @@
   src: url("static/fonts/Karrik-Regular.woff2") format("woff2");
   font-weight: unset;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url("/static/fonts/HankenGrotesk-Regular.woff2") format("woff2");
   font-weight: unset;
   font-style: normal;
+  font-display: swap;
 }
 
 * {
