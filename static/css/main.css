@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Karrik";
-  src: url("/static/fonts/Karrik-Regular.woff2") format("woff2");
-  font-weight: unset;
+  font-family: "Inter";
+  src: url("/static/fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -29,7 +29,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: oklch(0.2 0.047 83);
-  font-family: "Karrik", sans-serif;
+  font-family: "Inter", sans-serif;
   margin-bottom: 0.75em;
   line-height: 1.2;
 }
@@ -70,7 +70,7 @@ a:hover {
 
 .site-header {
   position: relative;
-  font-family: "Karrik", sans-serif;
+  font-family: "Inter", sans-serif;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid oklch(0.8 0.06 83);
