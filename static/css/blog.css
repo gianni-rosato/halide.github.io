@@ -18,6 +18,10 @@
   transition: transform 0.2s ease;
 }
 
+.blog-post-card * {
+  text-decoration: none;
+}
+
 .blog-post-card:hover {
   transform: translateY(-5px);
 }
@@ -108,6 +112,10 @@
 .call-to-action {
   margin-top: 3rem;
   text-align: center;
+}
+
+.call-to-action a {
+  text-decoration: none;
 }
 
 .call-to-action .cta-button {

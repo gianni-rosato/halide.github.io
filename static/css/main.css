@@ -51,13 +51,12 @@ p, li {
 }
 
 a {
-  /* color: oklch(0.91 0.113 125); */
-  color: oklch(0.3 0.088 125);
-  text-decoration: none;
+  text-decoration: underline;
+  color: oklch(0.45 0.06 83);
 }
 
 a:hover {
-  color: oklch(0.5 0.06 83);
+  color: oklch(0.55 0.06 83);
 }
 
 .container {
@@ -167,6 +166,10 @@ main {
   height: auto;
   object-fit: scale-down;
   border-radius: 2.0rem;
+}
+
+.main-nav a {
+  text-decoration: none;
 }
 
 /* Performance Tiles Styles */
