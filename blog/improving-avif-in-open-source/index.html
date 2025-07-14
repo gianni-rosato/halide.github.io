@@ -147,6 +147,7 @@
               <li>More sensitive variance-adaptive quantization</li>
               <li>Photography-tuned variance-adaptive quantization scaling</li>
               <li>A custom screen-content detection algorithm</li>
+              <li>Modifications to lambda weight modulation</li>
             </ol>
             <p>
               These techniques were the primary contributors to Tune 4's
@@ -263,7 +264,7 @@
               sent to an area to improve its quality.
             </p>
             <p>
-              Tuning for photographic content meant using a much gentler curve,
+              Tuning for photographic content meant using a modified curve,
               defined by the following equation:
             </p>
             <p>q = 0.15 * strength * (-log2((double)variance) + 10) + 1;</p>
@@ -282,17 +283,17 @@
               Finding this curve required considering the type of data present
               in photographs, the sensitivity of quality to quantization in
               intra-coded frames, and how our convex hull responded. One
-              interesting thing about this curve is that being "gentler" means
-              low-variance data isn't boosted as eagerly, but higher variance
-              data isn't tapered back down as quickly.
+              interesting thing about this curve is that while low-variance data
+              isn't boosted as eagerly, higher variance data is tapered back
+              much more slowly.
             </p>
 
             <h3>5. Screen Content Detection</h3>
             <p>
-              AV1 happens to have some special tools (namely Intra Block Copy,
-              or IBC) that help immensely with non-photographic "screen content"
-              (e.g. text screenshots, lineart, digital drawings) when compared
-              to photographs.
+              AV1 happens to have some special tools (namely Intra Block
+              Copy/IBC & palette mode) that help immensely with non-photographic
+              "screen content" (e.g. text screenshots, lineart, digital
+              drawings) when compared to photographs.
             </p>
             <p>
               Making screen content tools useful was accompanied with the goal
@@ -313,6 +314,33 @@
               high-variance, medium confidence, and high confidence. This
               implementation allowed us to strengthen an already strong use case
               for AVIF, where older codecs (namely JPEG) fell short.
+            </p>
+
+            <h3>6. Lambda</h3>
+            <p>
+              The lambda is a parameter used in rate-distortion optimization
+              (RDO). RDO is the process by which an encoder decides the best way
+              to encode a block of pixels by evaluating a cost function that
+              balances two competing goals. These goals are minimal distortion
+              (how much the encoded block differs from the original) and minimal
+              rate (how much data is required to encode a block). Lower rate
+              means a smaller file. The RDO cost function is typically expressed
+              via the equation below.
+            </p>
+            <p>
+              <em>Cost = Distortion + λ * Rate</em>
+            </p>
+            <p>
+              Due to the nature of this very simple equation, you can see that a
+              high lambda prioritizes rate reduction while a lower lambda will
+              favor reducing distortion.
+            </p>
+            <p>
+              In simple terms, what Tune Still Picture does is modulate the
+              lambda depending on the amount of quantization we desire. At
+              higher and lower quantization (the lowest & highest ends of the
+              quality spectrum respectively), we ramp down the lambda. In the
+              middle, we ramp it up. This improved our convex hull.
             </p>
 
             <h2>Aftermath</h2>
