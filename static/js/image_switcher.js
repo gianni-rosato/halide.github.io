@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "/static/img/eos3-libwebp.webp",
       "/static/img/eos3-iris.webp",
       "/static/img/eos3-jpegli.jpg",
-      "/static/img/eos3-source.webp",
+      "/static/img/eos3-source.png",
     ];
     const subtitles = [
       "113,446 bytes | 50.90 SSIMULACRA2 | 2.73 Butteraugli (3-norm, i203)",
       "113,450 bytes | 60.10 SSIMULACRA2 | 2.30 Butteraugli (3-norm, i203)",
       "113,678 bytes | 54.57 SSIMULACRA2 | 2.41 Butteraugli (3-norm, i203)",
-      "1,132,224 bytes",
+      "1,532,759 bytes",
     ];
     const args = [
       "libwebp",
