@@ -8,6 +8,7 @@
     <link href="/static/css/main.css" rel="stylesheet" />
     <link href="/static/css/mobile_menu.css" rel="stylesheet" />
     <link href="/static/css/metrics_table.css" rel="stylesheet" />
+    <link href="/static/css/switcher.css" rel="stylesheet" />
     <title>Iris</title>
   </head>
   <body>
@@ -167,6 +168,20 @@
               encoder (often within 1% of AVIF).
             </p>
           </div>
+        </section>
+        <section class="image-switcher">
+          <h1>See the Difference</h1>
+          <p>
+            Click the buttons below to switch between different encoders. The
+            image below comes from Daala's subset1 image test suite.
+          </p>
+          <div id="iris-switcher" class="image-container"></div>
+          <p>
+            Iris-WebP's visual performance is unparalleled. Designing lossy
+            image compression around the human eye allows us to deliver an
+            unmatched encoder capable of delivering an uptick in quality of
+            experience that users notice.
+          </p>
         </section>
         <h1>
           Metrics
@@ -386,5 +401,6 @@
       </div>
     </main>
     <script src="/static/js/mobile_menu.js"></script>
+    <script src="/static/js/image_switcher.js"></script>
   </body>
 </html>
